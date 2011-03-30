@@ -1,0 +1,104 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------
+mkdir nuevo-proyecto  
+genera un nuevo proyecto en donde vamos a tener todos nuestros archivos
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+$ git add .
+Esto le pide a git que haga un seguimiento de todos los ficheros en ese directorio.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+$ git add * 
+hay que añadir todos los archivos que ya tuviéramos en el directorio del proyecto. 
+Para ello se utiliza el comando add. 
+add añade los archivos al directorio de trabajo de Git y los marca para enviar ejmplo:  $ git add prog1.py
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+$ git commit -a
+para revisar los cambios. Cuando hayas terminado,
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Cuando tengamos algún cambio que queramos guardar, hacemos add y commit y seguimos trabajando; 
+al hacer add se añaden los archivos que han cambiado al directorio de trabajo de Git, para ser enviados en el próximo commit
+
+$ git add *
+$ git commit -m "Mensaje de este envío"
+
+o tambien 
+
+$ git commit –a –m "Mensaje de este envío"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+$ git diff
+Muestra los cambios entre el árbol de trabajo y el índice o un árbol, 
+los cambios entre el índice y un árbol, 
+los cambios entre dos árboles, o los cambios entre dos archivos en el disco.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+$ git push
+ lolo63_7@hotmail **********:
+Cuando queramos enviar los cambios al repositorio central basta con hacer push. push funciona sobre diversos protocolos
+
+
+$ git push origin master
+Si estamos utilizando varios servidores remotos, o tenemos varias ramas de desarrollo, 
+es obligatorio especificarlas en ese orden, por ejemplo, para el servidor remoto referenciado como origin, 
+y para la rama master (estos son los valores por defecto)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------- 
+$ git pull
+Cuando queramos probar en el servidor los nuevos cambios, debemos actualizar el repositorio al que apunta Apache para reflejar los cambios.
+Hacemos esto con pull desde el directorio de desarrollo del servidor 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+$ git fetch origin
+Si hay más desarrolladores en el equipo, todos estarán dejando sus cambios en el repositorio central, 
+por lo que para trabajar con sus cambios debemos mantener actualizada nuestra copia de trabajo. 
+Para ello se emplea fetch junto al nombre de referencia, en nuestro PC local de desarrollo
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+$ git checkout SHA1_HASH
+Esto te lleva atrás en el tiempo, sin tocar los commits más nuevos. 
+Sin embargo, como en los viajes en el tiempo de las películas de ciencia ficción, 
+estarás en una realidad alternativa, porque tus acciones fueron diferentes a las de la primera vez.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+$ git reset --hard
+si tu edición se vuelve irrecuperable se ejecuta  esto
+para volver a donde estabas
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Para importar un codigo de un sistema git a un archivo en su maquina se hace esto 
+git-clone git://direccion del codigo en git
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Puede pasar que se haya cambiado algo y usted no quiere ponerlo en el repositorio, para volver al la revision inmediatamente anterior, usted correria: 
+git-reset --hard HEAD^
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+si quieres que Git se olvide de determinados archivos, porque (por ejemplo) los borraste:
+$ git rm ARCHIVOSVIEJOS...
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Renombrar un archivo es lo mismo que eliminar el nombre anterior y agregar el nuevo. 
+También puedes usar git mv que tiene la misma sintaxis que el comando mv. Por ejemplo:
+$ git mv ARCHIVOVIEJO ARCHIVONUEVO
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ 
